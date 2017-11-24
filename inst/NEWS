@@ -1,0 +1,5 @@
+Dec 4: Added combineRIP function
+Nov 20: Added paired option to the ripSeek and mainSeek function
+Nov 22: Switch back to elementData as mcols seem to consume too much memory
+Nov 20: Now using mcols instead of elementData
+Nov 20: Added a line in galp2gal to prevent read ends larger than chromosome length, which may happen when reads are not properly paired.

@@ -1,0 +1,9 @@
+{
+    "path" : "~/myBiocPkg/RIPSeeker/R",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

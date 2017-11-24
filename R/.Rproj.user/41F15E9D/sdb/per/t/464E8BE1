@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# nbh.integer: the main HMM function that runs nbh_init, nbh_em, nbh_vit for input object of class \"integer\"\nnbh.integer <- function(x, K, NBM_NIT_MAX=250, NBM_TOL=1e-2, \n\t\tNBH_NIT_MAX=250, NBH_TOL=1e-3, runViterbi = FALSE, ...)\n{\t\n\tcount <- x\n\t\n\tmessage(sprintf(\"\\n***1. Initializing negative binomial HMM (nbh) with %d states:\\n\", K))\n\t\n\tnbhInit <- nbh_init(count, K, NBM_NIT_MAX, NBM_TOL)\n\t\n\tmessage(sprintf(\"\\n***2. Traininig nbh with forward-backward algorithm:\\n\"))\n\n\tnbhFB <- nbh_em(count, nbhInit$TRANS, nbhInit$alpha, nbhInit$beta, NBH_NIT_MAX, NBH_TOL)\n\t\n\tif(runViterbi) {\n\t\n\t\tmessage(sprintf(\"\\n***3. Deriving maximum-likelihood hidden state sequence with Viterbi algorithm:\\n\"))\n\t\t\n\t\tnbhVit <- nbh_vit(count, nbhFB$TRANS, nbhFB$alpha, nbhFB$beta)\n\t\t\n\t\tmessage(\"done!\")\n\t\t\n\t\tlist(\tinitTRANS=nbhInit$TRANS, initAlpha=nbhInit$alpha, initBeta=nbhInit$beta,\n\t\t\t\tpostprob=nbhFB$postprob, viterbi_state=nbhVit$class, \n\t\t\t\tTRANS=nbhFB$TRANS, alpha=nbhFB$alpha, beta=nbhFB$beta\t)\n\t} else {\n\t\t\n\t\tlist(\tinitTRANS=nbhInit$TRANS, initAlpha=nbhInit$alpha, initBeta=nbhInit$beta,\n\t\t\t\tpostprob=nbhFB$postprob, \n\t\t\t\tTRANS=nbhFB$TRANS, alpha=nbhFB$alpha, beta=nbhFB$beta\t)\t\n\t\t\n\t}\n}\n",
+    "created" : 1460468177482.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4203565632",
+    "id" : "464E8BE1",
+    "lastKnownWriteTime" : 1401316564,
+    "last_content_update" : 1401316564,
+    "path" : "~/myBiocPkg/RIPSeeker/R/nbh.integer.R",
+    "project_path" : "nbh.integer.R",
+    "properties" : {
+    },
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

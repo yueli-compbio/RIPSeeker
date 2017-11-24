@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# Function Name: \tf\n# Description: \t\tx\n# Input: \t\t\ty\n# Output:\t\t\tz\n#\n# Author: Yue Li\n###############################################################################\naddPseudoAlignment <- function(alignGR)\n{\n\temptyChrnames <- names(which(\n\t\t\t\t\tunlist(lapply(split(alignGR, seqnames(alignGR)), length)) == 0))\n\t\n\tif(length(emptyChrnames) > 0) {\n\t\t\n\t\tmessage(sprintf(\"*** %s do not have any alignment.\\n\", emptyChrnames))\n\t\t\n\t} else {\n\t\t\n\t\tmessage(sprintf(\"*** All chromosomes have at least one alignment\"))\n\t\t\n\t\treturn(alignGR)\n\t}\n\t\n\tpseudoreads <- rep(alignGR[1], length(emptyChrnames))\n\t\n\tstart(pseudoreads) <- 1\n\t\n\tend(pseudoreads) <- 20\n\t\n\temptyChrnames <- factor(emptyChrnames, levels=levels(seqnames(pseudoreads)))\n\t\n\t\n\tseqnames(pseudoreads) <- Rle(emptyChrnames)\n\t\n\t\n\tnames(pseudoreads) <- paste(\"pseudoreads\", 1:length(pseudoreads), sep=\"\")\n\t\n\t\n\talignGR <- append(alignGR, pseudoreads)\n\t\n\tmessage(sprintf(\"*** %d pseudoreads are appended to the end.\", length(emptyChrnames)))\n\t\n\treturn(alignGR)\n}",
+    "created" : 1440348200442.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4243857843",
+    "id" : "1AAC24D2",
+    "lastKnownWriteTime" : 1401316564,
+    "last_content_update" : 0,
+    "path" : "~/myBiocPkg/RIPSeeker/R/addPseudoAlignment.R",
+    "project_path" : "addPseudoAlignment.R",
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,258 @@
+\relax 
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\citation{ENCODEProjectConsortium:2007fu}
+\citation{rom:2011gf}
+\citation{Khalil:2009vv}
+\citation{Zhao:2010du}
+\citation{Guttman:2011bo}
+\citation{Mikkelsen:2007fk}
+\citation{Margueron:2011ie}
+\citation{Michels:2003jz}
+\citation{DOrso:2010fc}
+\citation{Michels:2003jz}
+\citation{Zhao:2010du}
+\citation{Mikkelsen:2007fk}
+\citation{2010PLoSO...511471W}
+\citation{Zhang:2008wp}
+\citation{Valouev:2008wz}
+\@writefile{toc}{\contentsline {article}{RIPSeeker: a statistical package for identifying protein-associated transcripts from RIP-seq experiments}{1}{Doc-Start}}
+\@writefile{toc}{\contentsline {section}{Introduction}{1}{section*.1}}
+\newlabel{intro}{{}{1}{Introduction\relax }{section*.1}{}}
+\citation{Trapnell:2009dp}
+\citation{Margueron:2011ie}
+\citation{Hafner:2010kr}
+\citation{Trapnell:2010kd}
+\citation{Guttman:2010io}
+\citation{Trapnell:2009dp}
+\citation{Rabiner:1989hs}
+\citation{MBishop:2006uc}
+\citation{Qin:2010gt}
+\citation{Anders:2010fu}
+\citation{Zhao:2010du}
+\citation{Cloonan:2008ge}
+\@writefile{toc}{\contentsline {section}{MATERIALS AND METHODS}{2}{section*.5}}
+\newlabel{mm}{{}{2}{MATERIALS AND METHODS\relax }{section*.5}{}}
+\@writefile{toc}{\contentsline {subsection}{RIPSeeker Overview}{2}{section*.6}}
+\newlabel{overview}{{}{2}{RIPSeeker Overview\relax }{section*.6}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Simplified biological principles of \textbf  {(a)} ChIP-seq, \textbf  {(b)} RNA-seq, and \textbf  {(c)} RIP-seq. In ChIP-seq \textbf  {(a)}, double-stranded DNA bound with protein of interests is pulled down by an antibody followed by HTS. Because the reads are usually shorter than the double-stranded DNA fragment, a true binding site gives rise to symmetrical peaks observed on the + and - strand separated by the distance approximately the same as the length of the fragment. However, the same principle does not apply to \textbf  {(b)} RNA-seq and RIP-seq \textbf  {(c)} because the RNA transcripts are single-stranded. On the other hand, noise or missing reads due to imperfect immunoprecipitation and non-specific protein-RNA interaction are intrinsically unique to RIP-seq. \relax }}{3}{figure.caption.2}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{seqComparisons}{{1}{3}{Simplified biological principles of \textbf {(a)} ChIP-seq, \textbf {(b)} RNA-seq, and \textbf {(c)} RIP-seq. In ChIP-seq \textbf {(a)}, double-stranded DNA bound with protein of interests is pulled down by an antibody followed by HTS. Because the reads are usually shorter than the double-stranded DNA fragment, a true binding site gives rise to symmetrical peaks observed on the + and - strand separated by the distance approximately the same as the length of the fragment. However, the same principle does not apply to \textbf {(b)} RNA-seq and RIP-seq \textbf {(c)} because the RNA transcripts are single-stranded. On the other hand, noise or missing reads due to imperfect immunoprecipitation and non-specific protein-RNA interaction are intrinsically unique to RIP-seq. \relax \relax }{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces The core idea of RIPSeeker. Following IP and HTS, reads are aligned to the reference genome and tallied within non overlapping bin of size determined automatically for each specific chromosome based on the coverage and chromosome length. Considering the read count in each bin as observed data point, a two-state hidden Markov model with negative binomial (NB) emission is employed to infer the RIP bins (assumed to be) associated with the hidden state corresponding to the NB with the larger mean. The inference step yield both the posterior probability of RIP state and the optimized HMM parameters. Next, Viterbi algorithm is applied to derived the most probable hidden state sequence with 1 denoted as the background state and \leavevmode {\color  {red}2} as the RIP state. The merged adjacent RIP bins are subject to significance tests based the posterior probabilities for the background and enriched states. \relax }}{3}{figure.caption.3}}
+\newlabel{core}{{2}{3}{The core idea of RIPSeeker. Following IP and HTS, reads are aligned to the reference genome and tallied within non overlapping bin of size determined automatically for each specific chromosome based on the coverage and chromosome length. Considering the read count in each bin as observed data point, a two-state hidden Markov model with negative binomial (NB) emission is employed to infer the RIP bins (assumed to be) associated with the hidden state corresponding to the NB with the larger mean. The inference step yield both the posterior probability of RIP state and the optimized HMM parameters. Next, Viterbi algorithm is applied to derived the most probable hidden state sequence with 1 denoted as the background state and \textcolor {red}{2} as the RIP state. The merged adjacent RIP bins are subject to significance tests based the posterior probabilities for the background and enriched states. \relax \relax }{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{Processing alignment inputs}{3}{section*.7}}
+\newlabel{Preprocessing}{{}{3}{Processing alignment inputs\relax }{section*.7}{}}
+\citation{Aboyoun:fk}
+\citation{Song:2011fk}
+\citation{Shimazaki:2007ho}
+\citation{Song:2011fk}
+\citation{Shimazaki:2007ho}
+\citation{Zhao:2010du}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Detailed workflow of RIPSeeker. RIPSeeker processes the input alignment files in BAM/BED/SAM format and determines the bin size based on the unique read counts on each chromosome. The two-state HMM parameters are initialized by negative binomial (NB) mixture model and optimized via EM. The two hidden states presumably correspond to the background and RIP regions. Each multihit is assigned to a unique locus with the highest posterior probability for the RIP state among other loci (mapped by the same read). The HMM parameters are then re-estimated with the augmented read count data. Viterbi algorithm running on the optimized HMM parameters yields the maximum likelihood hidden state sequence across each chromosome. The (merged) RIP regions from the Viterbi predictions are further filtered by the statistical tests for the model confidence based on the posterior encodings. Finally, annotated RIP regions are exported and programmatically uploaded to UCSC browser for visualization. \relax }}{4}{figure.caption.4}}
+\newlabel{workflow}{{3}{4}{Detailed workflow of RIPSeeker. RIPSeeker processes the input alignment files in BAM/BED/SAM format and determines the bin size based on the unique read counts on each chromosome. The two-state HMM parameters are initialized by negative binomial (NB) mixture model and optimized via EM. The two hidden states presumably correspond to the background and RIP regions. Each multihit is assigned to a unique locus with the highest posterior probability for the RIP state among other loci (mapped by the same read). The HMM parameters are then re-estimated with the augmented read count data. Viterbi algorithm running on the optimized HMM parameters yields the maximum likelihood hidden state sequence across each chromosome. The (merged) RIP regions from the Viterbi predictions are further filtered by the statistical tests for the model confidence based on the posterior encodings. Finally, annotated RIP regions are exported and programmatically uploaded to UCSC browser for visualization. \relax \relax }{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{Automatic bin size selection}{4}{section*.8}}
+\newlabel{binSizeSelection}{{}{4}{Automatic bin size selection\relax }{section*.8}{}}
+\citation{Pages:fk}
+\citation{Anders:2010fu}
+\citation{Anders:2010fu}
+\citation{Anders:2010fu}
+\citation{MBishop:2006uc}
+\citation{Meng:1993uq}
+\@writefile{loa}{\contentsline {algorithm}{\numberline {1}{\ignorespaces AutomaticBinSizeSelection\relax }}{5}{algorithm.1}}
+\newlabel{binSizeSelectionPseudo}{{1}{5}{AutomaticBinSizeSelection\relax \relax }{algorithm.1}{}}
+\@writefile{toc}{\contentsline {subsection}{Bin count}{5}{section*.9}}
+\newlabel{binCount}{{}{5}{Bin count\relax }{section*.9}{}}
+\@writefile{toc}{\contentsline {subsection}{Negative binomial distribution}{5}{section*.10}}
+\newlabel{nb}{{}{5}{Negative binomial distribution\relax }{section*.10}{}}
+\newlabel{nb}{{{\bf  1}}{5}{Negative binomial distribution\relax }{equation.0.1}{}}
+\newlabel{mu}{{{\bf  2}}{5}{Negative binomial distribution\relax }{equation.0.2}{}}
+\newlabel{var}{{{\bf  3}}{5}{Negative binomial distribution\relax }{equation.0.3}{}}
+\@writefile{toc}{\contentsline {subsection}{NB mixture model initialization}{5}{section*.11}}
+\newlabel{nbm}{{}{5}{NB mixture model initialization\relax }{section*.11}{}}
+\newlabel{mu2}{{{\bf  4}}{5}{NB mixture model initialization\relax }{equation.0.4}{}}
+\newlabel{pi}{{{\bf  5}}{5}{NB mixture model initialization\relax }{equation.0.5}{}}
+\citation{Meng:1993uq}
+\citation{Rabiner:1989hs}
+\newlabel{NBMgamma}{{{\bf  6}}{6}{NB mixture model initialization\relax }{equation.0.6}{}}
+\newlabel{nbmLogl}{{{\bf  12}}{6}{NB mixture model initialization\relax }{equation.0.12}{}}
+\@writefile{toc}{\contentsline {subsection}{HMM posterior decoding and parameter optimization}{6}{section*.12}}
+\newlabel{nbh}{{}{6}{HMM posterior decoding and parameter optimization\relax }{section*.12}{}}
+\newlabel{gammazn}{{{\bf  13}}{6}{HMM posterior decoding and parameter optimization\relax }{equation.0.13}{}}
+\newlabel{alpha}{{{\bf  15}}{6}{HMM posterior decoding and parameter optimization\relax }{equation.0.15}{}}
+\newlabel{A}{{{\bf  16}}{6}{HMM posterior decoding and parameter optimization\relax }{equation.0.16}{}}
+\citation{Rabiner:1989hs}
+\citation{Zhang:2008wp}
+\citation{Benjamini:1995ws}
+\citation{Zhang:2008wp}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Disambiguating multihits based on posterior decodings from HMM. Given more than one valid aligned loci on the same or different chromosome (x-axis), the multihit read is assigned to the locus with the highest posterior probability (y-axis) for the second state $p(z_i = 2 | \boldsymbol  {X})$ associated with the $\text  {NB}_2(a_2, b_2)$ with the larger mean $\mu = a_2/b_2$. \relax }}{7}{figure.caption.13}}
+\newlabel{disamMultihitsFig}{{4}{7}{Disambiguating multihits based on posterior decodings from HMM. Given more than one valid aligned loci on the same or different chromosome (x-axis), the multihit read is assigned to the locus with the highest posterior probability (y-axis) for the second state $p(z_i = 2 | \boldsymbol {X})$ associated with the $\NB _2(a_2, b_2)$ with the larger mean $\mu = a_2/b_2$. \relax \relax }{figure.caption.13}{}}
+\@writefile{toc}{\contentsline {subsection}{Disambiguate multihits using posterior decoding from HMM}{7}{section*.14}}
+\newlabel{disamMultihits}{{}{7}{Disambiguate multihits using posterior decoding from HMM\relax }{section*.14}{}}
+\@writefile{toc}{\contentsline {subsection}{Viterbi prediction of enriched bins}{7}{section*.15}}
+\newlabel{Viterbi}{{}{7}{Viterbi prediction of enriched bins\relax }{section*.15}{}}
+\newlabel{viterbi}{{{\bf  18}}{7}{Viterbi prediction of enriched bins\relax }{equation.0.18}{}}
+\@writefile{toc}{\contentsline {subsection}{Detect RIP regions}{7}{section*.16}}
+\newlabel{peakcall}{{}{7}{Detect RIP regions\relax }{section*.16}{}}
+\newlabel{ripscore}{{{\bf  19}}{7}{Detect RIP regions\relax }{equation.0.19}{}}
+\newlabel{pvalue}{{{\bf  21}}{7}{Detect RIP regions\relax }{equation.0.21}{}}
+\newlabel{qvalue}{{{\bf  22}}{7}{Detect RIP regions\relax }{equation.0.22}{}}
+\citation{Lawrence:fk}
+\citation{Durinck:2005bb}
+\citation{Durinck:2009uf}
+\citation{Zhu:2010uc}
+\citation{Zhu:2010uc}
+\citation{Robinson:2011ii}
+\citation{Zhang:2008wp}
+\citation{Valouev:2008wz}
+\citation{Qin:2010gt}
+\citation{Trapnell:2010kd}
+\citation{Roberts:2012kp}
+\citation{Zhao:2010du}
+\citation{Zhang:2008wp}
+\citation{Valouev:2008wz}
+\citation{Qin:2010gt}
+\citation{Trapnell:2010kd}
+\citation{Roberts:2012kp}
+\citation{Zhao:2010du}
+\citation{Trapnell:2010kd}
+\citation{Mortazavi:2008jj}
+\citation{Zhao:2010du}
+\citation{Carlson:uq}
+\citation{Aboyoun:fk}
+\citation{Zhao:2010du}
+\newlabel{eFDR}{{{\bf  23}}{8}{Detect RIP regions\relax }{equation.0.23}{}}
+\@writefile{toc}{\contentsline {subsection}{Genomic visualization}{8}{section*.17}}
+\newlabel{ucsc}{{}{8}{Genomic visualization\relax }{section*.17}{}}
+\@writefile{toc}{\contentsline {subsection}{Genomic annotation and Gene Ontology enrichment analysis}{8}{section*.18}}
+\newlabel{annotation}{{}{8}{Genomic annotation and Gene Ontology enrichment analysis\relax }{section*.18}{}}
+\@writefile{toc}{\contentsline {subsection}{RIPSeeker outputs}{8}{section*.19}}
+\@writefile{toc}{\contentsline {subsection}{Comparison methods}{8}{section*.21}}
+\newlabel{comparisonMethod}{{}{8}{Comparison methods\relax }{section*.21}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Comparison programs}{8}{section*.22}}
+\@writefile{toc}{\contentsline {subsubsection}{Rule-based method}{8}{section*.23}}
+\citation{Roberts:2012kp}
+\citation{Mak:2010iv}
+\citation{Zhao:2010du}
+\citation{Zhao:2010du}
+\citation{Zhao:2010du}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Comparison programs for RIP-seq analysis\relax }}{9}{table.caption.20}}
+\newlabel{ComparisonMethods}{{1}{9}{Comparison programs for RIP-seq analysis\relax \relax }{table.caption.20}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Union of peaks}{9}{section*.24}}
+\@writefile{toc}{\contentsline {subsection}{RIP-seq library construction for CCNT1}{9}{section*.25}}
+\@writefile{toc}{\contentsline {section}{RESULTS}{9}{section*.26}}
+\newlabel{results}{{}{9}{RESULTS\relax }{section*.26}{}}
+\@writefile{toc}{\contentsline {subsection}{RIP-seq datasets}{9}{section*.27}}
+\@writefile{toc}{\contentsline {subsubsection}{PRC2}{9}{section*.28}}
+\@writefile{toc}{\contentsline {subsubsection}{CCNT1}{9}{section*.29}}
+\@writefile{toc}{\contentsline {subsection}{Total predictions and reproducibility}{9}{section*.31}}
+\citation{Michels:2003jz}
+\citation{2010PLoSO...511471W}
+\citation{2010PLoSO...511471W}
+\citation{Laajala:2009ij}
+\newlabel{totalPeaks:PRC2}{{5(\textbf  {a})}{10}{Subfigure 5(\protect \textbf  {a})\relax }{subfigure.5.1}{}}
+\newlabel{sub@totalPeaks:PRC2}{{((\textbf  {a}))}{(\textbf  {a})}{Subfigure 5(\textbf  {a})\relax }{subfigure.5.1}{}}
+\newlabel{totalPeaks:CCNT1}{{5(\textbf  {b})}{10}{Subfigure 5(\protect \textbf  {b})\relax }{subfigure.5.2}{}}
+\newlabel{sub@totalPeaks:CCNT1}{{((\textbf  {b}))}{(\textbf  {b})}{Subfigure 5(\textbf  {b})\relax }{subfigure.5.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Quantities of peaks identified by each program on \textbf  {(a)} PRC2 and \textbf  {(b)} CCNT1 RIP-seq datasets. Both figures are trimmed for clarity due to the exceptionally large number of peaks identified by QuEST (labelled on the top of the bars). The deeper colours in each bar indicate the proportion of peaks shared in common between the Biorep1 and 2. In \textbf  {(b)}, ``RN7SK'' is labelled on the bars to indicate the positive detection of \emph  {RN7SK} by the corresponding program in that Biorep. \relax }}{10}{figure.caption.30}}
+\newlabel{totalPeaks}{{5}{10}{Quantities of peaks identified by each program on \textbf {(a)} PRC2 and \textbf {(b)} CCNT1 RIP-seq datasets. Both figures are trimmed for clarity due to the exceptionally large number of peaks identified by QuEST (labelled on the top of the bars). The deeper colours in each bar indicate the proportion of peaks shared in common between the Biorep1 and 2. In \textbf {(b)}, ``RN7SK'' is labelled on the bars to indicate the positive detection of \emph {RN7SK} by the corresponding program in that Biorep. \relax \relax }{figure.caption.30}{}}
+\@writefile{toc}{\contentsline {subsection}{Peak length}{10}{section*.33}}
+\newlabel{Peak length}{{}{10}{Peak length\relax }{section*.33}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Lengths of (merged) peaks or transcripts predicted by the six algorithms in comparison on the PRC2 datasets. \relax }}{10}{figure.caption.32}}
+\newlabel{peakLength}{{6}{10}{Lengths of (merged) peaks or transcripts predicted by the six algorithms in comparison on the PRC2 datasets. \relax \relax }{figure.caption.32}{}}
+\@writefile{toc}{\contentsline {subsection}{Overlap between predictions}{10}{section*.36}}
+\newlabel{overlap}{{}{10}{Overlap between predictions\relax }{section*.36}{}}
+\citation{Zhu:2010uc}
+\citation{Zhao:2010du}
+\newlabel{pairwise:PRC2}{{7(\textbf  {a})}{11}{Subfigure 7(\protect \textbf  {a})\relax }{subfigure.7.1}{}}
+\newlabel{sub@pairwise:PRC2}{{((\textbf  {a}))}{(\textbf  {a})}{Subfigure 7(\textbf  {a})\relax }{subfigure.7.1}{}}
+\newlabel{pairwise:CCNT1}{{7(\textbf  {b})}{11}{Subfigure 7(\protect \textbf  {b})\relax }{subfigure.7.2}{}}
+\newlabel{sub@pairwise:CCNT1}{{((\textbf  {b}))}{(\textbf  {b})}{Subfigure 7(\textbf  {b})\relax }{subfigure.7.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Pair-wise comparison of shared peaks. Pair-wise comparisons of the peak lists for (\textbf  {a}) PRC2 and (\textbf  {b}) CCNT1 RIP-seq predictions from the six computational algorithms. Each panel shows the percentage of total peaks from one method (column) that shared with another method (row). Programs in rows and columns are sorted by increasing number of peaks and entries are shaded by color gradients such that red represents the highest shared proportion and blue, the lowest. \relax }}{11}{figure.caption.34}}
+\newlabel{pairwise}{{7}{11}{Pair-wise comparison of shared peaks. Pair-wise comparisons of the peak lists for (\textbf {a}) PRC2 and (\textbf {b}) CCNT1 RIP-seq predictions from the six computational algorithms. Each panel shows the percentage of total peaks from one method (column) that shared with another method (row). Programs in rows and columns are sorted by increasing number of peaks and entries are shaded by color gradients such that red represents the highest shared proportion and blue, the lowest. \relax \relax }{figure.caption.34}{}}
+\newlabel{venn:peakcallers}{{8(\textbf  {a})}{11}{Subfigure 8(\protect \textbf  {a})\relax }{subfigure.8.1}{}}
+\newlabel{sub@venn:peakcallers}{{((\textbf  {a}))}{(\textbf  {a})}{Subfigure 8(\textbf  {a})\relax }{subfigure.8.1}{}}
+\newlabel{venn:nonpeakcallers}{{8(\textbf  {b})}{11}{Subfigure 8(\protect \textbf  {b})\relax }{subfigure.8.2}{}}
+\newlabel{sub@venn:nonpeakcallers}{{((\textbf  {b}))}{(\textbf  {b})}{Subfigure 8(\textbf  {b})\relax }{subfigure.8.2}{}}
+\newlabel{venn:eFDR}{{8(\textbf  {c})}{11}{Subfigure 8(\protect \textbf  {c})\relax }{subfigure.8.3}{}}
+\newlabel{sub@venn:eFDR}{{((\textbf  {c}))}{(\textbf  {c})}{Subfigure 8(\textbf  {c})\relax }{subfigure.8.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Venn diagram of RIPSeeker's predictions for PRC2 comparing with predictions from (\textbf  {a}) peak callers and (\textbf  {b}) transcript-based methods. (\textbf  {c}) eFDR of RIPSeeker's peaks shared with Cuffdiff and Rulebased predictions and unique to RIPSeeker. The negative value in (\textbf  {a}) resulted from the cases where a single peak from RIPSeeker overlaps with multiple peaks from other methods. \relax }}{11}{figure.caption.35}}
+\newlabel{venn}{{8}{11}{Venn diagram of RIPSeeker's predictions for PRC2 comparing with predictions from (\textbf {a}) peak callers and (\textbf {b}) transcript-based methods. (\textbf {c}) eFDR of RIPSeeker's peaks shared with Cuffdiff and Rulebased predictions and unique to RIPSeeker. The negative value in (\textbf {a}) resulted from the cases where a single peak from RIPSeeker overlaps with multiple peaks from other methods. \relax \relax }{figure.caption.35}{}}
+\@writefile{toc}{\contentsline {subsection}{Performance on predicting known transcripts}{11}{section*.39}}
+\newlabel{known}{{}{11}{Performance on predicting known transcripts\relax }{section*.39}{}}
+\newlabel{coverage:PRC2}{{9(\textbf  {a})}{12}{Subfigure 9(\protect \textbf  {a})\relax }{subfigure.9.1}{}}
+\newlabel{sub@coverage:PRC2}{{((\textbf  {a}))}{(\textbf  {a})}{Subfigure 9(\textbf  {a})\relax }{subfigure.9.1}{}}
+\newlabel{coverage:CCNT1}{{9(\textbf  {b})}{12}{Subfigure 9(\protect \textbf  {b})\relax }{subfigure.9.2}{}}
+\newlabel{sub@coverage:CCNT1}{{((\textbf  {b}))}{(\textbf  {b})}{Subfigure 9(\textbf  {b})\relax }{subfigure.9.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Base coverage of predictions by each algorithm on the three well-known (\textbf  {a}) PRC2-ncRNAs and (\textbf  {b}) CCNT1-ncRNA \emph  {RN7SK}. \relax }}{12}{figure.caption.37}}
+\newlabel{coverage}{{9}{12}{Base coverage of predictions by each algorithm on the three well-known (\textbf {a}) PRC2-ncRNAs and (\textbf {b}) CCNT1-ncRNA \emph {RN7SK}. \relax \relax }{figure.caption.37}{}}
+\newlabel{igv:Xist}{{10(\textbf  {a})}{12}{Subfigure 10(\protect \textbf  {a})\relax }{subfigure.10.1}{}}
+\newlabel{sub@igv:Xist}{{((\textbf  {a}))}{(\textbf  {a})}{Subfigure 10(\textbf  {a})\relax }{subfigure.10.1}{}}
+\newlabel{igv:RN7SK}{{10(\textbf  {b})}{12}{Subfigure 10(\protect \textbf  {b})\relax }{subfigure.10.2}{}}
+\newlabel{sub@igv:RN7SK}{{((\textbf  {b}))}{(\textbf  {b})}{Subfigure 10(\textbf  {b})\relax }{subfigure.10.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Visualization of predictions by each algorithm on known (\textbf  {a}) PRC2-ncRNA \emph  {Tsix} and \emph  {Xist} and (\textbf  {b}) CCNT1-ncRNA \emph  {RN7SK}. \relax }}{12}{figure.caption.38}}
+\newlabel{igv}{{10}{12}{Visualization of predictions by each algorithm on known (\textbf {a}) PRC2-ncRNA \emph {Tsix} and \emph {Xist} and (\textbf {b}) CCNT1-ncRNA \emph {RN7SK}. \relax \relax }{figure.caption.38}{}}
+\@writefile{toc}{\contentsline {subsection}{Consensus of PRC2-associated transcriptomic predictions}{12}{section*.40}}
+\newlabel{consensus}{{}{12}{Consensus of PRC2-associated transcriptomic predictions\relax }{section*.40}{}}
+\citation{Margueron:2011ie}
+\@writefile{toc}{\contentsline {subsection}{Enriched GO terms}{13}{section*.41}}
+\newlabel{enrichGO}{{}{13}{Enriched GO terms\relax }{section*.41}{}}
+\@writefile{toc}{\contentsline {section}{DISCUSSION}{13}{section*.42}}
+\@writefile{toc}{\contentsline {section}{Supplementary Data}{13}{section*.43}}
+\@writefile{toc}{\contentsline {section}{FUNDING}{13}{section*.44}}
+\bibstyle{nar}
+\bibdata{nar}
+\bibcite{ENCODEProjectConsortium:2007fu}{{1}{}{{}}{{}}}
+\bibcite{rom:2011gf}{{2}{}{{}}{{}}}
+\bibcite{Khalil:2009vv}{{3}{}{{}}{{}}}
+\bibcite{Zhao:2010du}{{4}{}{{}}{{}}}
+\bibcite{Guttman:2011bo}{{5}{}{{}}{{}}}
+\bibcite{Mikkelsen:2007fk}{{6}{}{{}}{{}}}
+\bibcite{Margueron:2011ie}{{7}{}{{}}{{}}}
+\bibcite{Michels:2003jz}{{8}{}{{}}{{}}}
+\bibcite{DOrso:2010fc}{{9}{}{{}}{{}}}
+\bibcite{2010PLoSO...511471W}{{10}{}{{}}{{}}}
+\bibcite{Zhang:2008wp}{{11}{}{{}}{{}}}
+\bibcite{Valouev:2008wz}{{12}{}{{}}{{}}}
+\bibcite{Trapnell:2009dp}{{13}{}{{}}{{}}}
+\bibcite{Hafner:2010kr}{{14}{}{{}}{{}}}
+\bibcite{Trapnell:2010kd}{{15}{}{{}}{{}}}
+\bibcite{Guttman:2010io}{{16}{}{{}}{{}}}
+\bibcite{Rabiner:1989hs}{{17}{}{{}}{{}}}
+\bibcite{MBishop:2006uc}{{18}{}{{}}{{}}}
+\bibcite{Qin:2010gt}{{19}{}{{}}{{}}}
+\bibcite{Anders:2010fu}{{20}{}{{}}{{}}}
+\bibcite{Cloonan:2008ge}{{21}{}{{}}{{}}}
+\bibcite{Aboyoun:fk}{{22}{}{{}}{{}}}
+\bibcite{Song:2011fk}{{23}{}{{}}{{}}}
+\bibcite{Shimazaki:2007ho}{{24}{}{{}}{{}}}
+\bibcite{Pages:fk}{{25}{}{{}}{{}}}
+\bibcite{Meng:1993uq}{{26}{}{{}}{{}}}
+\bibcite{Benjamini:1995ws}{{27}{}{{}}{{}}}
+\bibcite{Lawrence:fk}{{28}{}{{}}{{}}}
+\bibcite{Durinck:2005bb}{{29}{}{{}}{{}}}
+\bibcite{Durinck:2009uf}{{30}{}{{}}{{}}}
+\bibcite{Zhu:2010uc}{{31}{}{{}}{{}}}
+\bibcite{Robinson:2011ii}{{32}{}{{}}{{}}}
+\bibcite{Roberts:2012kp}{{33}{}{{}}{{}}}
+\bibcite{Mortazavi:2008jj}{{34}{}{{}}{{}}}
+\bibcite{Carlson:uq}{{35}{}{{}}{{}}}
+\bibcite{Mak:2010iv}{{36}{}{{}}{{}}}
+\bibcite{Laajala:2009ij}{{37}{}{{}}{{}}}
+\global\NAT@numberstrue
+\global\@namedef{@lastpage}{14}
+\@writefile{toc}{\contentsline {section}{ACKNOWLEDGEMENTS}{14}{section*.45}}
+\@writefile{toc}{\contentsline {subsubsection}{Conflict of interest statement.}{14}{section*.46}}
+\@writefile{toc}{\contentsline {section}{\numberline {\relax }REFERENCES}{14}{section*.47}}

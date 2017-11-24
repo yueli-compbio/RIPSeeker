@@ -1,0 +1,55 @@
+import(methods, IRanges, GenomicRanges, SummarizedExperiment, Rsamtools, GenomicAlignments)
+
+importMethodsFrom(rtracklayer, browserSession,
+                 browserView, export, genome,
+                 "genome<-", import, ranges,
+                 "track<-", trackNames)
+
+importFrom(graphics, abline, legend, lines, plot)
+
+importFrom(grDevices, col2rgb, dev.off, pdf)
+
+importFrom(rtracklayer, SeqinfoForUCSCGenome)
+
+importFrom(stats, p.adjust, pnorm, rgamma, rpois, runif)
+
+export(
+	addDummyProb,
+	addPseudoAlignment,
+        annotateRIP,
+        binCount,
+        combineAlignGals,
+        computeLogOdd,
+        computeRPKM,
+	combineRIP,
+        disambiguateMultihits,
+        empiricalFDR,
+        evalBinSize,
+        exportGRanges,
+        galp2gal,
+        getAlignGal,
+        logScoreWithControl,
+        logScoreWithoutControl,
+	mainSeekSingleChrom,
+        mainSeek,
+        nbh,
+        nbh.GRanges,
+        nbh.integer,
+        nbh_chk,
+        nbh_em,
+        nbh_gen,
+        nbh_init,
+        nbh_vit,
+        nbm_chk,
+        nbm_em,
+        plotCoverage,
+        plotStrandedCoverage,
+        randindx,
+        ripSeek,
+        rulebaseRIPSeek,
+        scoreMergedBins,
+        seekRIP,
+        selectBinSize,
+        statdis,
+        viewRIP
+)

@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "# generic function for nbh that supports object of class \"integer\" and \"GRanges\"\nnbh <- function(x, ...) UseMethod(\"nbh\")\n",
+    "created" : 1460468171625.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2926847501",
+    "id" : "FC02D865",
+    "lastKnownWriteTime" : 1401316564,
+    "last_content_update" : 1401316564,
+    "path" : "~/myBiocPkg/RIPSeeker/R/nbh.R",
+    "project_path" : "nbh.R",
+    "properties" : {
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

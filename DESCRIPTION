@@ -1,0 +1,23 @@
+Package: RIPSeeker
+Type: Package
+Title: RIPSeeker: a statistical package for identifying
+        protein-associated transcripts from RIP-seq experiments
+Version: 1.11.0
+Date: 2013-Apr-13
+Author: Yue Li
+Maintainer: Yue Li <yueli@cs.toronto.edu>
+Description: Infer and discriminate RIP peaks from RIP-seq alignments
+        using two-state HMM with negative binomial emission
+        probability. While RIPSeeker is specifically tailored for
+        RIP-seq data analysis, it also provides a suite of
+        bioinformatics tools integrated within this self-contained
+        software package comprehensively addressing issues ranging from
+        post-alignments processing to visualization and annotation.
+Depends: R (>= 2.15), methods, IRanges, GenomicRanges, SummarizedExperiment,
+        Rsamtools, GenomicAlignments, rtracklayer
+Suggests: biomaRt, ChIPpeakAnno, parallel, GenomicFeatures
+License: GPL-2
+URL: http://www.cs.utoronto.ca/~yueli/software.html
+Lazyload: yes
+Packaged: 2012-11-11 13:50:47 UTC;
+biocViews: Sequencing, RIPSeq
