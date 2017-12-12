@@ -15,21 +15,14 @@ combineRIP <- function(ripPath, pattern="gff3$", combineOption="intersect",
 		
 			gr <- as(import(x), "GRanges")
 				
-			cutoff <- 
-		
-			if(!is.null(values(gr)$logOddScore)) 
-				values(gr)$logOddScore >= logOddCutoff else TRUE &
-			
-			if(!is.null(values(gr)$pval))
-				values(gr)$pval <= pvalCutoff else TRUE &
-			
-			if(!is.null(values(gr)$pvalAdj))
-				values(gr)$pvalAdj <= pvalAdjCutoff else TRUE &
-			
-			if(!is.null(values(gr)$eFDR))
-				values(gr)$eFDR <= eFDRCutoff else TRUE
-			
-			gr[cutoff]
+			         # construct cutoff rule
+         			cutoff <- 
+            				values(gr)$logOddScore >= logOddCutoff &
+            				values(gr)$pval <= pvalCutoff &
+            				values(gr)$pvalAdj <= pvalAdjCutoff &
+            				values(gr)$eFDR <= eFDRCutoff
+         
+         			gr[cutoff]
 			
 		}
 	)
